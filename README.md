@@ -31,12 +31,21 @@ Agente autónomo de reclutamiento por **WhatsApp** integrado con un **ATS** (App
                                         └── Google Calendar API
 ```
 
-## Inicio rápido
+## Inicio rápido (un solo comando)
+
+```bash
+chmod +x run.sh
+./run.sh
+```
+
+Eso instala dependencias, carga datos demo y arranca el servidor en **http://localhost:8000**.
+
+## Inicio manual paso a paso
 
 ### 1. Instalar dependencias
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -45,7 +54,7 @@ pip install -r requirements.txt
 
 ```bash
 cp .env.example .env
-# Editar .env con tus credenciales de Twilio y OpenAI
+# Editar .env con tus credenciales de Twilio y OpenAI (opcional para pruebas)
 ```
 
 ### 3. Cargar datos de demostración
@@ -63,6 +72,8 @@ Incluye finalistas de ejemplo para:
 ```bash
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
+
+> Usa `--host 0.0.0.0` (no `127.0.0.1`) para que sea accesible desde el navegador o port-forwarding del IDE.
 
 Documentación interactiva: http://localhost:8000/docs
 
