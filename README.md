@@ -54,6 +54,10 @@ cp .env.example .env
 python scripts/seed_data.py
 ```
 
+Incluye finalistas de ejemplo para:
+- `POS-DEV-001` — Desarrollador Full Stack Senior (3 candidatos)
+- `POS-SEC-003` — Guardia de Seguridad / Vigilante (4 candidatos)
+
 ### 4. Iniciar servidor
 
 ```bash
